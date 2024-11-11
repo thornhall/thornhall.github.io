@@ -37,6 +37,11 @@ remote_theme: mmistakes/minimal-mistakes@4.26.2
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
 
 include: ["_pages"]
 
