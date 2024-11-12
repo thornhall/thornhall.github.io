@@ -1,8 +1,11 @@
 thorn_hall:
   name        : "Thorn Hall"
-  bio         : "Software engineer. Expert debugger."
+  bio         : "Software Engineer. 5 YOE. Stanford Alumnus."
   avatar      : "/assets/images/thorn_hall.jpg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:thorn@alumni.stanford.edu"
+      url: "mailto:haydenthornhall@gmail.com"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/thorn-hall/"
