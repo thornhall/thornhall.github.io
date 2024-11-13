@@ -11,6 +11,7 @@ header:
 permalink: /
 author: thorn_hall
 author_profile: true
+read_time: false
 ---
 
 # About Me
