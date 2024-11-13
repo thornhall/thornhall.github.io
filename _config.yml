@@ -51,8 +51,6 @@ defaults:
       author: thorn_hall
       author_profile: true
       comments: false
-
-defaults:
   - scope:
       path: ""
       type: posts
