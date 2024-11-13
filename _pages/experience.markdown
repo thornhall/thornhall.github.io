@@ -7,7 +7,7 @@ toc_sticky: true
 read_time: true
 ---
 Heads up! If you're looking to get a succinct overview of my work experience, please look at my <a target="_blank" alt="Thorn Hall's resume" title="View my resume here" href="/assets/pdfs/Thorn_Hall_resume.pdf">resume</a>.
-This document focuses on a more qualitative, in-depth approach, while others may be seeking a more succinct overview.
+This document focuses on a more qualitative, in-depth approach, while others may be seeking a more compact overview.
 {: .notice--info}
 
 # What kind of engineer am I?
@@ -27,6 +27,8 @@ Here are qualities that are often attributed to me by managers and peers:
 - **Debugger**. I've been told that I have a unique skill for debugging issues that are hard to understand and/or track down. 
 
 # Technologies
+
+A list of technologies I have worked with in the past:
 
 | Programming Language       | Technology/Framework |
 | --------   | -------       |
@@ -55,6 +57,9 @@ I was on multiple different teams at Shippo.
 - The first team I was on was called the carriers team. We were the primary owners of the 100+ API integrations that Shippo has with carriers. Not only that, but we were the primary contributors and maintainers of the Rating, Label, Tracking, Manifest, Refund, Pickups, and Carrier Account APIs. To understand the scope of this work, it's worth pointing out that the work of this team was later split into 4 different teams. During this time I worked on adding new API integrations to Shippo, maintaining existing integrations, adding features to core infrastructure, and developer tooling.
 - The next team I was on was called team Mercury. During this time period we primarily worked on the File Track service, one of the first microservices at Shippo. This file track service reduced the time to receive tracking updates from 4 hours to just minutes for eligible accounts. 
 - The third team I worked on was the Label team at Shippo. We were responsible for the Label, Manifest, and Refund APIs. During my time on this team, I worked on reconciliation pipelines, API migrations, optimizing monitoring and alerting, optimizing CI/CD, and other things. 
+
+#### USPS
+It's worth mentioning that I was a subject matter expert on a system responsible for a very large portion of revenue: USPS. In my time at Shippo, I solved many USPS problems, designed many technical solutions within the USPS domain, and was a primary contributor and owner of USPS processes. I estimate I've either prevented the loss of or directly unlocked significant portions of revenue within the 10s of millions range related to USPS.
 
 ### Projects
 Heads up! Instead of repeating the projects that appear on my resume in this section, I ask the reader to look at my <a target="_blank" alt="Thorn Hall's resume" title="View my resume here" href="/assets/pdfs/Thorn_Hall_resume.pdf">resume</a>, which gives a detailed overview of many of the projects I worked on at Shippo.
