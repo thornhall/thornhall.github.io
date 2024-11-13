@@ -11,7 +11,7 @@ search: false
 
 $background-color: #000000 !default;
 $text-color: #eaeaea !default;
-$primary-color: #06288b !default;
+$primary-color: #06288b !default !important;
 $border-color: mix(#000000, $background-color, 20%) !default;
 $code-background-color: mix(#000, $background-color, 15%) !default;
 $code-background-color-dark: mix(#000, $background-color, 20%) !default;
@@ -33,7 +33,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #696a72;
+  background-color: #696a72 !important;
 }
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
