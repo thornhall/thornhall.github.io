@@ -11,8 +11,8 @@ search: false
 
 $background-color: #000000 !default;
 $text-color: #eaeaea !default;
-$primary-color: #fbfcff !default;
-$border-color: mix(#fff, $background-color, 20%) !default;
+$primary-color: #06288b !default;
+$border-color: mix(#000000, $background-color, 20%) !default;
 $code-background-color: mix(#000, $background-color, 15%) !default;
 $code-background-color-dark: mix(#000, $background-color, 20%) !default;
 $form-background-color: mix(#000, $background-color, 15%) !default;
@@ -24,15 +24,16 @@ $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: mix(#000, $text-color, 20%) !default;
 $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
 
-.author__urls.social-icons i,
-.author__urls.social-icons .svg-inline--fa,
-.page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa  {
-  color: inherit;
+th {
+  background-color: #696c72;
 }
 
-.ais-search-box .ais-search-box--input {
-  background-color: $form-background-color;
+td, th {
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: #696a72;
 }
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin

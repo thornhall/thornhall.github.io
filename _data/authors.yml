@@ -1,6 +1,6 @@
 thorn_hall:
   name        : "Thorn Hall"
-  bio         : "Software Engineer. 5 YOE. Stanford Alumnus."
+  bio         : "Software Engineer. 5 YOE. Stanford CS '19"
   avatar      : "/assets/images/thorn_hall.jpg"
   links:
     - label: "Email"
