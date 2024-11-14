@@ -39,8 +39,19 @@ plugins:
   - jekyll-gist
   - jemoji
   - jekyll-include-cache
+  - jekyll-algolia
 
-include: ["_pages", "_tech_blogs"]
+search_provider: algolia
+algolia:
+  application_id: ZGXUQMF3VY
+  index_name: site_index
+  search_only_api_key: b7e107b56cbb39e73a418a8545e95aa8
+  powered_by: false
+
+collections:
+  - web_pages
+
+include: ["_web_pages", "_home_page"]
 search: true
 
 defaults:
