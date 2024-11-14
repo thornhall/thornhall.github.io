@@ -38,7 +38,6 @@ jobs:
         bundle clean
 
     - name: Update Algolia index
-      working-directory: /
       run: bundle exec jekyll algolia push
       env:
         ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
