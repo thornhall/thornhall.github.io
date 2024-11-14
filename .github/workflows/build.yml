@@ -1,5 +1,5 @@
-name: build
-
+name: build-algolia-search-index
+run-name: build-algolia-search-index
 on:
   push:
     branches:
@@ -8,6 +8,7 @@ on:
   repository_dispatch: {}
 
 jobs:
+  environment: github-pages
   build:
     runs-on: ubuntu-latest
     steps:
