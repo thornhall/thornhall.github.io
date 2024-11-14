@@ -26,6 +26,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-CNC8J1ZB6Q"
+    anonymize_ip: false # default
 
 minimal_mistakes_skin: dark
 
