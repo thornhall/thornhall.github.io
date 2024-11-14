@@ -23,8 +23,8 @@ jobs:
       uses: actions/cache@v4
       with:
         path: |
-          /Gemfile.lock
-          /vendor/bundle
+          Gemfile.lock
+          vendor/bundle
         key: ${{ runner.os }}-bundler-${{ hashFiles('docs/Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-bundler-
@@ -32,7 +32,6 @@ jobs:
     - name: Install - Bundler
       env:
         MAKE: make -j2
-      working-directory: /
       run: |
         bundle config set path vendor/bundle
         bundle install --jobs=4 --retry=3
