@@ -36,3 +36,7 @@ gem "github-pages", "~> 232", group: :jekyll_plugins
 
 gem "jekyll-include-cache", group: :jekyll_plugins
 
+gem "jekyll-algolia", group: :jekyll_plugins
+gem 'jekyll-environment-variables', group: :jekyll_plugins
+gem 'jekyll-contentful-data-import', '~> 1.8', '>= 1.8.3'
+

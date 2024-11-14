@@ -1,5 +1,6 @@
 ---
 title: About Me
+excerpt: A synopsis of my path to becoming a software engineer.
 permalink: /about/
 toc: true
 toc_sticky: true
