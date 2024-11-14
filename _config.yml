@@ -61,7 +61,7 @@ defaults:
       author: thorn_hall
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       categories: tech
       show_date: true
       search: true
