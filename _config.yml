@@ -77,7 +77,7 @@ defaults:
       author: thorn_hall
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       categories: tech
       show_date: true
       search: true
@@ -85,12 +85,7 @@ defaults:
       toc_sticky: true
       header:
         overlay_color: "#000000"
-
-comments:
-  provider: "facebook"
-  facebook:
-    num_posts: 5
-    colorscheme: "dark"
+  
 
 # Exclude from processing.
 # The following items will not be processed, by default.
