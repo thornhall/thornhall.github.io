@@ -13,7 +13,7 @@ Heads up! If you're looking to get a snapshot of my professional career, head ov
 Hello! My name is Thorn Hall. I am 28 years old. I have two cats, Tofu and Soufflé, who are both 2 years old. I am a software engineer. I currently live in Marion, Illinois. In the following passages, I am going to detail my path through life, including how I became a software engineer.
 
 ## Interests
-- Video games (fun fact, I'm ranked champion 2 in rocket league.)
+- Video games (fun fact, I'm ranked in the top 1% of players in the world in rocket league.)
 - Basketball
 - Music (hip hop, rock, metal)
 - Drums
