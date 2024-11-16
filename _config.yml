@@ -86,11 +86,11 @@ defaults:
       header:
         overlay_color: "#000000"
 
-
 comments:
-  provider: "disqus"
-  disqus:
-    shortname: "thornhall"
+  provider: "facebook"
+  facebook:
+    num_posts: 5
+    colorscheme: "dark"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
