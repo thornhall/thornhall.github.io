@@ -62,5 +62,5 @@ I was on multiple different teams at Shippo.
 It's worth mentioning that I was a subject matter expert on a system responsible for a very large portion of revenue: USPS. In my time at Shippo, I solved many USPS problems, designed many technical solutions within the USPS domain, and was a primary contributor and owner of USPS processes. I estimate I've either prevented the loss of or directly unlocked significant portions of revenue within the 10s of millions range related to USPS.
 
 ### Projects
-Heads up! Instead of repeating the projects that appear on my resume in this section, I ask the reader to look at my <a target="_blank" alt="Thorn Hall's resume" title="View my resume here" href="/assets/pdfs/Thorn_Hall_resume.pdf">resume</a>, which gives a detailed overview of many of the projects I worked on at Shippo.
+Instead of repeating the projects that appear on my resume in this section, I ask the reader to look at my <a target="_blank" alt="Thorn Hall's resume" title="View my resume here" href="/assets/pdfs/Thorn_Hall_resume.pdf">resume</a>, which gives a detailed overview of many of the projects I worked on at Shippo.
 {: .notice--info}
