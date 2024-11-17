@@ -59,6 +59,7 @@ As mentioned, one downside of using a cache is the risk of data being stale (i.e
         - Ideal for ready-heavy but light write workloads.
     - **Cons**:
         - Writes are more expensive. 
+        - We could be wasting storage space for elements that are not being read by the application.
 - **Write-back strategy**. In a write-back strategy, we keep the cache up to date with the most recent information and we occasionally write that data to the database, perhaps on a schedule.
     - Example: the user updates their email and we write that data to the cache. Later, we eventually sync the cache's data to the database. 
     - **Pros**:
@@ -72,6 +73,8 @@ As mentioned, one downside of using a cache is the risk of data being stale (i.e
         - This approach is low in complexity. 
     - **Cons**:
         - When there's a cache miss, it will take longer to return a response because we will have to read from the database. 
+- **Cache invalidation strategies**. We can set a TTL (time to live) on a cached resource. This causes it to be evicted from the cache after the TTL expires. This forces the application to get up-to-date information from the DB. Another example of an eviction policy is a Least Recently Used (LRU) cache. Cache invalidation strategies also help keep the cache small.
+
 
 ## Caching Technologies
 The most ubiquitous server-side caching softwares are:

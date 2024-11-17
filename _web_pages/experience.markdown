@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 read_time: true
 ---
-Heads up! If you're looking to get a succinct overview of my work experience, please look at my <a target="_blank" alt="Thorn Hall's resume" title="View my resume here" href="/assets/pdfs/Thorn_Hall_resume.pdf">resume</a>.
+If you're looking to get a succinct overview of my work experience, please look at my <a target="_blank" alt="Thorn Hall's resume" title="View my resume here" href="/assets/pdfs/Thorn_Hall_resume.pdf">resume</a>.
 This document focuses on a more qualitative, in-depth approach, while others may be seeking a more compact overview.
 {: .notice--info}
 
