@@ -1,6 +1,6 @@
 ---
 title:  "Design Patterns: Introduction to Caching"
-date:   2024-11-14 08:00:00 -0600
+date:   2024-11-16 08:00:00 -0600
 excerpt: "A beginner's intro to caching."
 header:
     overlay_image: /assets/images/intro_to_caching.png
@@ -68,7 +68,7 @@ As mentioned, one downside of using a cache is the risk of data being stale (i.e
 - **Lazy-loading or Cache-aside**. In this strategy, data is loaded into the cache whenever a user makes a request and we can't find that information in the cache. Because it wasn't found in the cache, we would then fetch the data from the database and then update the cache.
     - Example: the user makes a request for their email address. we look in the cache and we don't find it, so we fetch it from the database and update the cache.
     - **Pros**:
-        - The cache will naturally have what the application is requesting actually requesting reads for, keeping the cache small.
+        - The cache will reflect what the application frequently makes reads for and nothing extra, keeping the cache small.
         - This approach is low in complexity. 
     - **Cons**:
         - When there's a cache miss, it will take longer to return a response because we will have to read from the database. 
