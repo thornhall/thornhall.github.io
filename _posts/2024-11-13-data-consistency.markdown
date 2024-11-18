@@ -1,5 +1,5 @@
 ---
-title:  "Data Consistency in Software Systems"
+title:  "Data Consistency in Distributed Software Systems"
 date:   2024-11-13 08:00:00 -0600
 excerpt: "How does data consistency apply to software system design?"
 ---
@@ -31,7 +31,7 @@ The idea is that any given system must optimize for either consistency or availa
 
 Note that there is a third property (where the "P" comes from), which is **Partition Tolerance**. That is typically a given in distributed systems - the tradeoff is just between consistency and availability. 
 
-Example Systems
+# Example Systems
 Relational databases such as PostgreSQL can be configured to meet strong consistency requirements. 
 
 DynamoDB is optimized for availability over consistency, although it does have configurable consistency options. 

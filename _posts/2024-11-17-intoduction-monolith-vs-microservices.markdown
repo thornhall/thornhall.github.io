@@ -58,7 +58,7 @@ the context of monoliths vs. microservices, because each architecture has implic
 - **Data consistency in distributed systems**. Because each service typically has its own database, it can be challenging to keep all data consistent across microservices.
 
 ### When to Use a Monolith
-A monolith is ideal for smaller business that need to get to the market quickly. In the short term they allow teams to be more agile. They do not scale in the long term. 
+A monolith is ideal for smaller business that need to get to the market quickly. In the short term they allow teams to be more agile. They do not always scale in the long term. 
 
 ## Key Takeaways
 - Monoliths and microservices are the two primary application design patterns.
