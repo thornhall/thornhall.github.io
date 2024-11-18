@@ -35,8 +35,6 @@ Example JSON:
 }
 ```
 
-#### REST API Endpoints
-
 ### SOAP
 SOAP APIs use the SOAP protocol to communicate (although they commonly use HTTP.) SOAP APIs use a data format called XML.
 
