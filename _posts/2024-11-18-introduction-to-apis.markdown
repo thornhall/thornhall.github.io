@@ -94,32 +94,38 @@ CRUD stands for **Create**, **Read**, **Update**, **Delete**. Each REST API impl
 1. GET
     - Purpose: Retrieves data from the database without modifying it.
     - Usage: Used for read-only operations to fetch information about resources.
-    - Idempotency: Yes, `GET` requests are idempotent (calling it multiple times produces the same result).
+    - Idempotence: Yes, `GET` requests are idempotent (calling it multiple times produces the same result).
     - Example:`GET /books`: Retrieves a list of all books. `GET /books/123`: Retrieves details of the book with ID 123.
 
 2. POST
     - Purpose: Creates a new resource on the database.
     - Usage: Used when the client needs to add new data, such as creating a new record or entry.
-    - Idempotency: No, `POST` is not idempotent (repeated calls create duplicate resources unless handled otherwise).
+    - Idempotence: No, `POST` is not idempotent (repeated calls create duplicate resources unless handled otherwise).
     - Example: `POST /books`: Creates a new book record with the data provided in the request body.
 
 3. PUT
     - Purpose: Updates or replaces an existing resource on the database.
     - Usage: Typically used to replace the entire content of a resource. If the resource doesn’t exist, it can sometimes create it (though this depends on the API design).
-    - Idempotency: Yes, `PUT` is idempotent (repeated calls with the same data result in the same resource state).
+    - Idempotence: Yes, `PUT` is idempotent (repeated calls with the same data result in the same resource state).
     - Example: `PUT /books/123`: Replaces the book with ID 123 with the data provided in the request body.
 
 4. PATCH
     - Purpose: Partially updates an existing resource on the database.
     - Usage: Used to modify only specific fields of a resource without affecting other fields.
-    - Idempotency: Yes, `PATCH` is idempotent if the same patch data is applied multiple times.
+    - Idempotence: Yes, `PATCH` is idempotent if the same patch data is applied multiple times.
     - Example:`PATCH /books/123`: Updates only specified fields (e.g., title or author) of the book with ID 123.
 
 5. DELETE
     - Purpose: Deletes a resource from the database.
     - Usage: Used when the client needs to remove a resource.
-    - Idempotency: Yes, `DELETE` is idempotent (repeated calls result in the same resource state—deleted).
+    - Idempotence: Yes, `DELETE` is idempotent (repeated calls result in the same resource state—deleted).
     - Example:`DELETE /books/123`: Deletes the book with ID 123.
+
+## Key Takeaways
+- APIs are applications that other applications can send requests to over a network. 
+- Popular API types include REST, SOAP, and GraphQL.
+- APIs are CRUD applications, meaning they're used to modify database resources. 
+
 
 
 
