@@ -1,5 +1,5 @@
 ---
-title:  "Design Patterns: APIs"
+title:  "Design Components: APIs"
 date:   2024-11-18 08:00:00 -0600
 excerpt: "What is an API?"
 ---

@@ -1,5 +1,5 @@
 ---
-title:  "Design Patterns: Introduction to Caching"
+title:  "Design Components: Caching"
 date:   2024-11-16 08:00:00 -0600
 excerpt: "A beginner's intro to caching."
 header:
