@@ -1,5 +1,5 @@
 ---
-title:  "Design Patterns: Cron Jobs"
+title:  "Design Components: Cron Jobs"
 date:   2024-11-13 08:00:00 -0600
 excerpt: "An introduction to the common design pattern."
 ---
