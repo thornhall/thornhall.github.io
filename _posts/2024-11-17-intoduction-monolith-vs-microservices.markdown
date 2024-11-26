@@ -42,7 +42,7 @@ the context of monoliths vs. microservices, because each architecture has implic
 ### Downsides of Monolith
 - **Scaling issues**. Often, when we need to scale one part of a monolithic application, we have to scale the entire application (including unrelated components), wasting resources. 
 - **Deployment issues**. When we need to deploy changes to one small part of the application, we have to re-deploy the entire application, even unrelated parts, which increases the probability of bugs.
-- **Team velocity issues**. In an large organization using a monolith, many teams will be modifying the codebase at the same time and at varying cadences. Because all of the code is shared, deployment has to be carefully coordinated between teams, which can slow teams down. 
+- **Team velocity issues**. In a large organization using a monolith, many teams will be modifying the codebase at the same time and at varying cadences. Because all of the code is shared, deployment has to be carefully coordinated between teams, which can slow teams down. 
 - **Increased codebase complexity**. A monolith codebase is often very complex and highly coupled. Changes in one area can cause unintended side effects in another. This increases the probability of bugs.
 
 ### How Microservices Help Solve these Challenges
@@ -58,7 +58,7 @@ the context of monoliths vs. microservices, because each architecture has implic
 - **Data consistency in distributed systems**. Because each service typically has its own database, it can be challenging to keep all data consistent across microservices.
 
 ### When to Use a Monolith
-A monolith is ideal for smaller business that need to get to the market quickly. In the short term they allow teams to be more agile. They do not always scale in the long term. 
+A monolith is ideal for smaller businesses that need to get to the market quickly. In the short term they allow teams to be more agile. They do not always scale in the long term. 
 
 ## Key Takeaways
 - Monoliths and microservices are the two primary application design patterns.
