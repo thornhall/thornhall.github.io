@@ -164,7 +164,7 @@ this would return the following results:
 #### Key-Value Store DBs
 Example: DynamoDB.
 
-Key value stores are databases where each stored object has a unique key and value. You could think if it like a distributed hash map. They're ideal for read-heavy workflows and for data that doesn't require strict schemas. 
+Key value stores are databases where each stored object has a unique key associated with a value. You could think if it like a distributed hash map. They're ideal for read-heavy workflows and for data that doesn't require strict schemas. 
 
 #### DynamoDB Example
 DynamoDB tables have a partition key and a sort key. For this example we will have the following:
