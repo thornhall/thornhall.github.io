@@ -1,0 +1,69 @@
+---
+title:  "Design Components: Queues"
+date:   2024-11-30 08:00:00 -0600
+excerpt: "A discussion of queues, an important systems design concept."
+---
+## Background
+Queues are an extremely important component in large scale, distributed systems. They are necessary for a number of use cases including async processing, rate limiting, and buffering. Let's dive into some examples. 
+
+## Case Study
+Imagine an application where we have a Product service and an Email service. The Product service is used for customers to buy items. When a user purchases an item, we want to send the user an email confirmation via the email service.
+
+One way we could implement this is when a customer request to purchase an item comes in, we make an API call to the email service directly so that the email service can send the email. In this example, the product service would have to wait for the email service to return a successful response before returning a response to the customer that the purchase was successful. 
+
+<figure>
+    <a href="/assets/images/bad_email_example.png"><img src="/assets/images/bad_email_example.png"></a>
+    <figcaption>A diagram showing our theoretical naive approach to implementing a customer checkout flow. In this diagram, when a user purchases a product it's handled by the product service, which then makes a request to the email service and waits for the email service to successfully send the email before returning a successful purchase to the customer.</figcaption>
+</figure>
+
+### Why This Design isn't Good
+
+This design does not scale for a couple of reasons: 
+
+1. What happens if many users are making purchases at the same time?
+    - In this case, our Product service will be making many requests to the email service. Because sending emails might take a few seconds, the email service could be easily overwhelmed. We will quickly run out of Email server instances to handle email requests.
+    - When the server instances become overwhelmed with requests, new purchases will become impossible, taking our service down. We could write the Product service application code to simply move on with the purchase process when the email fails, but now customers aren't getting emails. We have no way to "make it right" in this example by sending emails to customers after-the-fact when the email service is no longer overwhelmed.
+2. What happens if our email providers experience performance issues?
+   - This is similar to case 1. Our email service may become overwhelmed because sending emails is taking a long time (or not working at all). This would result in the product service wasting resources waiting for a response from the email service, resulting in a poor customer experience, and possibly an outage. 
+   - In this example, we would also run into the issue where we have no way to "make it right" via sending emails when things are functional again. 
+
+### Enter: The Queue
+Here's a better design for sending emails with a queue. 
+
+<figure>
+    <a href="/assets/images/better_email_example.png"><img src="/assets/images/better_email_example.png"></a>
+    <figcaption>A diagram showing a better approach to handling email sending. When a user purchases a product, the product service instead pushes a message to the email queue which can later be processed by the email service. All the product service has to do is send the message to the queue, and then it returns a successful response to the customer.</figcaption>
+</figure>
+
+Why does this design scale better? 
+
+1. **Better handling for bursty volume**. When there's a sudden burst of purchase requests, the product service will put a bunch of messages onto the email queue. This allows the email service to dequeue each message individually and process them at its own pace. Now the email service does not get overwhelmed when there's a sudden influx of purchases.
+2. **Decoupling the product service and email service**. In our first design, the product and email service were heavily coupled. The product service had to make an API request directly to the email service and wait for a response. In our new design, the product service simply sends a message and moves on, without needing to worry about or design around capabilities of the email service. This reduces the probability that an issue in one service will affect another service. 
+3. **Handling email service slowdowns**. If one of the services we use to send emails experiences performance degradation, it just means we will process the queue slower. Because we decoupled the product and email service, a slowdown in email sending would not affect product purchase. 
+4. **Retries**. What if an email fails to send for some reason? Whether that's because of an email provider slowdown or a transient network issue, we could push the message back onto the queue to retry it later (or re-read from the queue, depending on the technology used).
+5. **Fault tolerance**. If our email service goes down for some reason, perhaps because of a bug we accidentally introduced, the presence of a queue ensures that we can pick up where we left off when the service is back online. The product service can keep scheduling emails by adding them to the queue without worrying about if the email service is online. 
+
+
+## Other Queue Use Cases
+- **Event-driven architectures**. Queues can be used by services to send messages to one another. Each message acts as an event that the corresponding service uses to trigger an action. This style of system design is highly decoupled, scalable, and easy to understand. 
+- **Parallelism**. The use of a queue allows processing tasks to be performed at the same time asynchronously. We can dynamically add more server instances to process the queue faster.
+- **Batch processing**. Queues can be used to aggregate many tasks over time and process them in batches to improve efficiency or reduce costs.
+- **Real-time processing**. Queues like Kafka can also be used as a data stream that consumers process for real-time or near-real-time updates.
+
+## Producer and Consumer
+An important concept to understand with queues is that one application acts as a producer and one acts as a consumer. In our example, the product service is the producer and the email service is the consumer. As you may have guessed, producers are responsible for producing messages; the consumers are responsible for processing the messages. 
+
+## Key Technologies
+Some of the most ubiquitous queue technologies are:
+- Apache Kafka
+- Amazon SQS
+- RabbitMQ
+- Redis
+
+## Key Takeaways
+- Queues are an incredibly important component in systems design.
+- They allow us to handle bursts of requests and decouple system components, in addition to other benefits like retries and fault tolerance.
+
+
+
+
